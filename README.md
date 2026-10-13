@@ -1,4 +1,4 @@
-# 安信可新人FAE之刃
+# 安信可FAE之刃
 
 面向新人 FAE 的安信可全产品线助手：根据任务组合官方 Skill、检索官方知识库、补问关键条件，交付排查步骤、示例代码和可转发客户的回复。以 Windows Codex 为主，兼容 Claude Code、Cursor。
 
@@ -15,7 +15,7 @@ npx skills add Gnahz-oat/ai-thinker-fae-blade --skill ai-thinker-fae-blade
 在安装器中选择 Codex、Claude Code 或 Cursor，以及项目级/用户级安装。仅选择主 Skill，避免重复安装嵌套快照中的同名官方技能。安装后在新对话中输入：
 
 ```text
-使用“安信可新人FAE之刃”帮我排查：Ai-WB2-12F 的 MQTT 连接失败。
+使用“安信可FAE之刃”帮我排查：Ai-WB2-12F 的 MQTT 连接失败。
 固件版本……，串口日志……，目标是给客户一套排查步骤和回复。
 ```
 
@@ -64,4 +64,4 @@ python -m unittest discover -s tests -v
 - [官方 Gitee 镜像](https://gitee.com/Ai-Thinker-Open/skills)
 - [官方 MCP 说明](https://docs.ai-thinker.com/mcp/)
 
-本项目由用户个人维护，名称为“安信可新人FAE之刃”，不代表安信可官方出品。主 Skill 与维护代码采用 MIT；上游原文件及其许可保存在快照 source/ 内，提交 SHA 和来源记录于 catalog.json。
+本项目由用户个人维护，名称为“安信可FAE之刃”，不代表安信可官方出品。主 Skill 与维护代码采用 MIT；上游原文件及其许可保存在快照 source/ 内，提交 SHA 和来源记录于 catalog.json。
