@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+*.log
+skills-lock.json
+.claude/
+.agents/
+dist/
+.mimocode/
+skills/combo-at-commands/TEST-CASES.md

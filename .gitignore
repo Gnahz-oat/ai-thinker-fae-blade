@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+dist/
+.work/
+skills/ai-thinker-fae-blade/.runtime/
+skills/ai-thinker-fae-blade/upstream/.sync-lock/

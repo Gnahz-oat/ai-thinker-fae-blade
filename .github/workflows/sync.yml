@@ -1,0 +1,33 @@
+name: Sync upstream
+on:
+  schedule:
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sync-official-skills
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r skills/ai-thinker-fae-blade/scripts/requirements.txt
+      - run: python skills/ai-thinker-fae-blade/scripts/blade.py sync
+      - run: python skills/ai-thinker-fae-blade/scripts/blade.py validate
+      - run: python -m unittest discover -s tests -v
+      - name: Commit verified official snapshot
+        shell: bash
+        run: |
+          git add skills/ai-thinker-fae-blade/upstream
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Update verified Ai-Thinker official Skill snapshot'
+          git push

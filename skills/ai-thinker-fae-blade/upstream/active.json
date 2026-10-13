@@ -1,0 +1,8 @@
+{
+  "snapshot": "snapshots/5c2b711815ef4d3451d1a393a8571ded3327d6cfad79b4f933b912f4ff958531",
+  "complete": false,
+  "missing": [
+    "board-pins"
+  ],
+  "skill_count": 13
+}

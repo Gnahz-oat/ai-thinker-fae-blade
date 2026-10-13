@@ -1,0 +1,4 @@
+{
+  "acknowledged_missing": ["board-pins"],
+  "reason": "2026-10-13：官方安装页列出 14 项；GitHub 返回 404；官方 Gitee 和 npm 发布包仅含 13 项。用户同意先发布 13 项并明确缺口。后续同步必须匹配完整官方目录后才应用。"
+}
